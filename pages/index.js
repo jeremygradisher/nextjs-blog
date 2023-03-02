@@ -31,7 +31,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by React/Nex.js and Jeremy Gradisher
+          Powered by React/Next.js and Jeremy Gradisher
         </a> - <Link href="/posts/first-post/">About</Link>
       </footer>
     </Layout>
