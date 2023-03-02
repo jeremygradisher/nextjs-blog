@@ -1,117 +1,39 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
+import Layout, { siteTitle } from '../components/layout';
+import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-
       <main>
-        <h1 className={styles.title}>
-          Read <Link href="/posts/first-post">this page!</Link>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+      <section className={utilStyles.headingMd}>
+        <p>Senior Software Developer - Muskegon, Michigan</p>
+        <p>
+          Qualifications:<br />
+          • 7+ years of working experience with Ruby on Rails.<br />
+          • 20+ years of working exp with HTML5, PHP, JavaScript and CSS.<br />
+          • 15+ years of working exp with WordPress, custom themes and plugins, multi-site networks, ACF Advanced Custom Fields.<br />
+          • 15+ years of working exp with both PostgreSQL and MySQL.<br />
+          • Comprehensive knowledge of modern web design patterns and front end technologies like HTML5, JQuery, Bootstrap, React, Node.js and TypeScript.<br />
+          • Extensive experience implementing, maintaining, and using HTTP REST/JSON.<br />
+          • Firm understanding of version control tools (Git specifically), and managing
+          branches with a team of developers.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/learn/basics/assets-metadata-css/metadata" className={styles.card} target="_blank">
-            <h3>Documentation &rarr;</h3>
-            <p>Im done for tonight. But here is the bookmark.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+      </section>
       </main>
-
       <footer>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://231webdev.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
+          Powered by React/Nex.js and Jeremy Gradisher
+        </a> - <Link href="/posts/first-post/">About</Link>
       </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
-  )
+    </Layout>
+  );
 }
